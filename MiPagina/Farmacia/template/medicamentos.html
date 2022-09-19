@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaBarrio | Medicamentos</title>
+</head>
+{% extends "inicio.html" %}
+
+{% load static %}
+
+{% block header1 %}
+
+<body>
+    <main class="form-signin w-100 m-auto">
+        <form action="/medicamentos/" method="POST"> {% csrf_token %}
+            <h1 class="h3 mb-3 fw-normal">Que medicamento desea agregar? </h1>
+            <div class="form-floating">
+                <input type="text" name="nombreMedicamento" class="form-control"  placeholder=" " >
+                    <label for="floatingInput">Nombre del medicamento</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" name= "nombreLaboratorio"class="form-control" placeholder=" ">
+                    <label for="floatingPassword">Laboratorio</label>
+            </div>
+            <div class="form-floating">
+                <input type="text" name= "nombreDrogra"class="form-control" placeholder=" ">
+                    <label for="floatingPassword">Drogra Componente</label>
+            </div>
+            <div class="form-floating">
+                <input type="number" name= "codigoBarra"class="form-control" placeholder=" ">
+                    <label for="floatingPassword">Codigo de Barras</label>
+            </div>
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Guardar</button>
+        </form>
+    </main>
+</body>
+</html>
+{% endblock %}

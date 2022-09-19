@@ -1,0 +1,27 @@
+.buscarMedicamento{
+    position: relative;
+    top: 60px;
+}
+
+.contenidoBuscarMedicamento{
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.formularioBuscarMedicamento{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 10px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px ;
+
+}
+
+.buscarMedicamento{
+    background-color: green;
+}

@@ -41,10 +41,8 @@ def medicamentos(request):
 def buscar_medicamento(request):
     if request.GET["nombreMedicamento"]:
         nombre= request.GET["nombreMedicamento"]
-        medicamentos= Medicamento.object.filter(
-            nombreMarca__icontains = nombre
-        )
-        return render(request, "medicamentos.html", {"medicamendo": medicamentos})
+        medicamentos= Medicamento.objects.filter(nombreMarca__icontains = nombre )
+        return render(request, "signup.html", {"medicamentos": medicamentos})
     else:
         respuesta= "No enviaste datos"
     return HttpResponse(respuesta)

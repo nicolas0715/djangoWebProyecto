@@ -27,15 +27,28 @@
 }
 
 .v-line{
-    border-left: thick solid #000;
-    height:100%;
-    left: 50%;
+    height:80%;
+    left: 55%;
     position: absolute;
+    text-align: center;
 }
 
 .b-line{
-    border-right: thick solid #000;
-    height:100%;
-    right: 50%;
+    height:80%;
+    right: 55%;
     position: absolute;
 }
+
+.recuadro {
+	border:1px solid black;
+	width:49.5%;
+	display:inline-block;
+	height:49.5%;
+	overflow:hidden;
+}
+
+.titulo_laboratorios{
+    text-align: center;
+    margin-bottom: 20px;
+}
+

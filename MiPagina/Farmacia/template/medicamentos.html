@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sucursales</title>
+    <title>FarmaBarrio | Medicamentos</title>
 </head>
 
 {% extends "inicio.html" %}
@@ -12,7 +12,6 @@
 {% load static %}
 
 {% block header1 %}
-
 
 <link rel="stylesheet" href="{% static 'css/miestilo.min.css'%}">
 <body>
@@ -39,7 +38,7 @@
         </form>
     </div>
     <div class="v-line">
-        <form action="/medicamentos/" method="GET"> 
+        <form action="/medicamentos" method="GET"> 
             <h1 class="h3 mb-3 fw-normal">Que medicamento desea buscar? </h1>
             <div class="form-floating">
                 <input type="text" name="nombreMedicamento" class="form-control"  placeholder=" " >
@@ -49,6 +48,18 @@
         </form>
     </div>
     {% endblock %}
+    <div class='recuadro'>
+        {% if medicamentos %}
+        <ul>
+            {% for medicamento in medicamentos %}
+            <li>{{medicamento.nombreMedicamento}}</li>
+            <li>{{medicamento.nombreDroga}}</li>
+            <li>{{medicamento.nombreLaboratorio}}</li>
+            <li>{{medicamento.codigoBarra}}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
 </body>
 </html>
 

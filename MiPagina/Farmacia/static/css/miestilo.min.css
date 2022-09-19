@@ -25,3 +25,17 @@
 .buscarMedicamento{
     background-color: green;
 }
+
+.v-line{
+    border-left: thick solid #000;
+    height:100%;
+    left: 50%;
+    position: absolute;
+}
+
+.b-line{
+    border-right: thick solid #000;
+    height:100%;
+    right: 50%;
+    position: absolute;
+}
